@@ -322,7 +322,7 @@ class Trivia(callbacks.Plugin):
             irc.reply(_('Current scores for %s:' % (channel)))
             scores = ''
             for key, value in self.scores[channel].items():
-                scores += '#%s#: %s ' % (key, value)
+                scores += '-%s-: %s ' % (key, value)
             irc.reply(scores)
     score = wrap(score, ['channel'])
 
